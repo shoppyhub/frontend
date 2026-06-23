@@ -1,0 +1,68 @@
+# RKD MART - Comprehensive Robots.txt for SEO
+# https://www.robotstxt.org/robotstxt.html
+
+# Allow all search engines
+User-agent: *
+Allow: /
+
+# Disallow sensitive directories and files
+Disallow: /api/
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /logs/
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /src/
+Disallow: /*.json$
+Disallow: /*.env$
+Disallow: /404.html
+Disallow: /500.html
+
+# Allow specific API endpoints for search indexing
+Allow: /api/products/
+Allow: /api/search/
+Allow: /api/marketplace/vendors/
+
+# Sitemap location
+Sitemap: https://rkd-mart.com/sitemap.xml
+
+# Specific bot configurations
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 3
+
+# Block unwanted crawlers
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: BacklinkCrawler
+Disallow: /
+
+# Allow image indexing for SEO
+User-agent: Googlebot-Image
+Allow: /images/
+Allow: /uploads/
+
+# Allow CSS and JS for proper rendering
+User-agent: Googlebot
+Allow: /css/
+Allow: /js/
+Allow: /static/

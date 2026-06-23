@@ -1,0 +1,115 @@
+{
+  "short_name": "RKD MART",
+  "name": "RKD MART - Your Local Marketplace",
+  "description": "Shop fresh groceries, electronics, fashion, and more from trusted local vendors. Fast delivery, secure payments, and amazing deals.",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "logo144.png",
+      "type": "image/png",
+      "sizes": "144x144"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#10b981",
+  "background_color": "#ffffff",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["shopping", "e-commerce", "marketplace"],
+  "screenshots": [
+    {
+      "src": "screenshots/mobile-home.png",
+      "sizes": "375x667",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Home screen showing featured products"
+    },
+    {
+      "src": "screenshots/mobile-product.png",
+      "sizes": "375x667",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Product detail page"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Search Products",
+      "short_name": "Search",
+      "description": "Search for products across categories",
+      "url": "/search",
+      "icons": [
+        {
+          "src": "icons/search.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "View Cart",
+      "short_name": "Cart",
+      "description": "View items in your shopping cart",
+      "url": "/cart",
+      "icons": [
+        {
+          "src": "icons/cart.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Track Orders",
+      "short_name": "Orders",
+      "description": "Track your order status",
+      "url": "/orders",
+      "icons": [
+        {
+          "src": "icons/orders.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "play",
+      "url": "https://play.google.com/store/apps/details?id=com.rkdmart.mobile",
+      "id": "com.rkdmart.mobile"
+    },
+    {
+      "platform": "itunes",
+      "url": "https://apps.apple.com/app/rkd-mart/id123456789"
+    }
+  ],
+  "prefer_related_applications": false,
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  "launch_handler": {
+    "client_mode": "focus-existing"
+  },
+  "protocol_handlers": [
+    {
+      "protocol": "web+rkdmart",
+      "url": "/product/%s"
+    }
+  ]
+}
