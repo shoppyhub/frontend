@@ -5,14 +5,16 @@ import axios from 'axios';
  * यह फ़ाइल फ्रंटएंड और बैकएंड के बीच सुरक्षित और तेज़ संचार सुनिश्चित करती है।
  */
 
-// 1. सुरक्षित रूप से Base URL प्राप्त करना
+// 1. सुरक्षित रूप से Base URL प्राप्त करना (Updated for Local and Production)
 const getBaseURL = () => {
     try {
-        // In development, always use Vite proxy for stable local routing.
+        // कंप्यूटर पर टेस्ट करते समय Vite प्रॉक्सी का उपयोग करें
         if (import.meta.env.DEV) return '/api';
-        return import.meta.env.VITE_API_BASE_URL || '/api';
+        
+        // लाइव (Production) होने पर सीधे Render का URL उपयोग करें
+        return "https://backend-uscq.onrender.com/api";
     } catch (e) {
-        return '/api';
+        return "https://backend-uscq.onrender.com/api";
     }
 };
 
